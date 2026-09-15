@@ -1,0 +1,8 @@
+import { ArrowRight, CalendarDays, FlaskConical, Landmark, Search, Users } from 'lucide-react'
+const hubs=[
+['NESA Community Hub','Nigeria','National economics community · Concept hub','4.8k','green'],
+['University Economics Chapters','Pan-African','Verified student and faculty chapters','12.6k','blue'],
+['African Policy Institutes Network','Africa + Diaspora','Think tanks, policy labs and research institutes','6.2k','gold'],
+['Central Banking Community','Pan-African','Monetary policy, markets and financial stability','8.9k','teal'],
+]
+export function Institutions(){return <div className="page-wrap"><div className="page-hero"><p className="eyebrow">INSTITUTION NETWORK</p><h1>Let institutions keep their identity while joining a wider economics network.</h1><p>National societies, universities, departments, think tanks, research institutes, banks and development organisations can run verified hubs without becoming isolated silos.</p></div><div className="search-filter-bar"><div className="searchbox static"><Search size={18}/><input placeholder="Search institutions and university chapters…"/></div></div><div className="institution-grid">{hubs.map(([name,country,desc,members,color])=><article className="institution-card card" key={name}><div className={`institution-top cover-${color}`}><Landmark size={26}/></div><h3>{name}</h3><p>{desc}</p><span>{country}</span><div className="institution-stats"><span><Users size={15}/>{members} members</span><span><CalendarDays size={15}/>Events</span><span><FlaskConical size={15}/>Research</span></div><button className="secondary-btn full">Open hub <ArrowRight size={16}/></button></article>)}</div></div>}
