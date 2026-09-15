@@ -1,0 +1,87 @@
+/* Social-feed-first upgrade */
+.desktop-only{display:inline-flex}
+.sidebar-toggle{margin-left:-7px;margin-right:-3px;border:1px solid #e0e7ee;background:#fff}
+.sidebar,.main-shell{transition:width .22s ease,margin-left .22s ease}
+.sidebar-collapsed{width:78px}
+.main-shell-collapsed{margin-left:78px}
+.sidebar-collapsed .sidebar-head{padding:0 20px}
+.sidebar-collapsed .network-status{margin:14px auto 0;width:42px;height:42px;padding:0;justify-content:center}
+.sidebar-collapsed .network-status div,
+.sidebar-collapsed .nav-link span,
+.sidebar-collapsed .nav-link em,
+.sidebar-collapsed .sidebar-community,
+.sidebar-collapsed .profile-chip>div,
+.sidebar-collapsed .profile-chip>svg{display:none}
+.sidebar-collapsed .side-nav{padding:14px 10px}
+.sidebar-collapsed .nav-link{justify-content:center;padding:12px}
+.sidebar-collapsed .profile-chip{justify-content:center;padding:9px;margin: auto 11px 14px}
+.sidebar-collapsed .logo-wrap{justify-content:center;width:100%}
+
+.social-home{display:grid;grid-template-columns:minmax(0,760px) 330px;gap:20px;align-items:start;justify-content:center}
+.social-main{min-width:0;display:flex;flex-direction:column;gap:13px}
+.social-rail{display:flex;flex-direction:column;gap:14px;position:sticky;top:95px}
+.social-feed-header{display:flex;align-items:end;justify-content:space-between;gap:20px;padding:0 2px 3px}
+.social-feed-header h1{font-size:25px;margin:0;color:#0b2039;letter-spacing:-.55px}
+.social-feed-header p{font-size:11px;color:#6b7989;margin:4px 0 0}
+
+.economist-strip{padding:12px 13px;overflow:hidden}
+.strip-title{display:flex;flex-direction:column;margin-bottom:9px}
+.strip-title strong{font-size:11px}.strip-title span{font-size:8px;color:#7c8998;margin-top:2px}
+.economist-strip-scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.economist-strip-scroll::-webkit-scrollbar{display:none}
+.mini-person-card{min-width:218px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:8px;border:1px solid #e8edf2;border-radius:12px;background:#fbfcfd}
+.mini-person-card>div{min-width:0;display:flex;flex-direction:column}
+.mini-person-card strong{font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-person-card span{font-size:7px;color:#7a8796;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.mini-follow,.post-follow{border:1px solid #bdd0df;background:#fff;color:#0d5f94;font-size:8px;font-weight:850;border-radius:8px;padding:6px 8px}
+.mini-follow.following,.post-follow.following{background:#eef6f5;color:#0e756d;border-color:#b6d9d3}
+
+.social-composer{margin:0}
+.social-tabs{margin-top:0;background:#fff;border:1px solid #e2e8ee;border-radius:13px;padding:0 12px;gap:18px}
+.social-tabs button{padding:12px 1px 10px}
+
+.facebook-post{padding:16px 17px}
+.facebook-post .post-head{align-items:flex-start}
+.post-follow{display:inline-flex;align-items:center;gap:4px;margin-left:auto;flex:none}
+.post-social-proof{display:flex;justify-content:space-between;border-top:1px solid #edf1f4;padding-top:10px;margin-top:13px;font-size:8px;color:#7a8796}
+.social-actions{margin-top:6px;padding-top:6px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:2px}
+.social-actions button{justify-content:center;padding:7px 5px;border-radius:8px}
+.social-actions button:hover{background:#f1f6f7}
+.social-actions .bookmark-action{margin-left:0}
+
+.student-prompt-card{padding:17px;display:flex;gap:12px;align-items:center}
+.student-prompt-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#e8edff;color:#2455df;flex:none}
+.student-prompt-card h2{font-size:15px;margin:0 0 4px}
+.student-prompt-card p{font-size:9px;color:#6d7b8b;margin:0;line-height:1.55}
+
+.community-suggestions{display:flex;flex-direction:column}
+.community-suggestions button{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:9px;border:0;background:transparent;text-align:left;padding:9px 3px;border-top:1px solid #edf1f4;color:inherit}
+.community-suggestions button:first-child{border-top:0}
+.community-suggestions button:hover{background:#f8fbfb}
+.community-symbol{width:33px;height:33px;border-radius:9px;background:#e9f3f1;color:#0e756d;display:grid;place-items:center;font-size:8px;font-weight:900}
+.community-suggestions button>span:nth-child(2){display:flex;flex-direction:column}
+.community-suggestions strong{font-size:9px}.community-suggestions small{font-size:7px;color:#7c8998;margin-top:2px}
+
+.professor-tools-title{font-size:14px;margin:4px 0 6px}
+.professor-tools-copy{font-size:9px;color:#6e7b8a;line-height:1.55;margin:0 0 9px}
+.professor-tools{display:flex;flex-direction:column;gap:5px}
+.professor-tools button{border:1px solid #e0e7ee;background:#fbfcfd;border-radius:9px;padding:8px 9px;display:flex;align-items:center;gap:7px;color:#435469;font-size:8px;font-weight:750}
+.professor-tools button:hover{border-color:#b7d8d2;color:#0e756d;background:#f1f8f7}
+
+@media(max-width:1120px){
+  .social-home{grid-template-columns:minmax(0,1fr) 300px}
+}
+@media(max-width:900px){
+  .social-home{grid-template-columns:1fr}
+  .social-rail{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .social-rail>section:last-child{grid-column:1/-1}
+  .desktop-only{display:none}
+}
+@media(max-width:720px){
+  .social-rail{grid-template-columns:1fr}
+  .social-rail>section:last-child{grid-column:auto}
+  .social-feed-header{align-items:flex-start}
+  .social-feed-header .secondary-btn{display:none}
+  .social-actions{grid-template-columns:1fr 1fr 1fr auto}
+  .post-follow{padding:5px 6px}
+}
