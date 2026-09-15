@@ -1,8 +1,8 @@
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="logo-wrap" aria-label="AfriEcon Nexus">
-      <div className="logo-mark"><span>A</span><i /></div>
-      {!compact && <div className="logo-copy"><strong>AfriEcon</strong><span>NEXUS</span></div>}
+    <div className="logo-wrap" aria-label="EconomistHub">
+      <div className="logo-mark"><span>E</span><i /></div>
+      {!compact && <div className="logo-copy"><strong>EconomistHub</strong><span>NIGERIA · GLOBAL</span></div>}
     </div>
   )
 }

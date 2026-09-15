@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Shell } from './components/Shell'
 import { Home } from './pages/Home'
+import { Profile } from './pages/Profile'
 import { Network } from './pages/Network'
 import { Research } from './pages/Research'
 import { Policy } from './pages/Policy'
@@ -13,6 +14,7 @@ import { Institutions } from './pages/Institutions'
 export default function App() {
   return <Shell><Routes>
     <Route path="/" element={<Home/>}/>
+    <Route path="/profile" element={<Profile/>}/>
     <Route path="/network" element={<Network/>}/>
     <Route path="/research" element={<Research/>}/>
     <Route path="/policy" element={<Policy/>}/>
